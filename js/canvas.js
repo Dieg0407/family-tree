@@ -105,8 +105,7 @@ export class Canvas {
   render() {
     this.clear();
     for (let drawable of this.drawableElements) {
-      this.ctx.strokeStyle = drawable.color;
-      this.ctx.strokeRect(drawable.x, drawable.y, drawable.width, drawable.height);
+      drawable.stroke(this.ctx);
     }
   }
 
