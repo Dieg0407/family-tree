@@ -1,4 +1,9 @@
 /**
 * @typedef {Object} Drawable
-* @property {function(CanvasRenderingContext2D):void} draw
+* @property {number} id
+* @property {number} x
+* @property {number} y
+* @property {number} width
+* @property {number} height
+* @property {string} color
 **/

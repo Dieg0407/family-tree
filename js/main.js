@@ -1,10 +1,8 @@
 import { Canvas } from "./canvas.js";
-import { Card } from "./card.js";
 
-const canvas = Canvas({ width: 1500, height: 1000 })
-const card1 = Card({ x: 10, y: 10, width: 100, height: 100 });
-const card2 = Card({ x: 10, y: 120, width: 100, height: 100 });
+const canvas = new Canvas({ width: 1500, height: 1000 });
+canvas.setupEvents();
 
-canvas.addDrawable(card1);
-canvas.addDrawable(card2);
+canvas.addDrawable({ id: 1, x: 10, y: 10, width: 100, height: 100, color: "pink" })
+canvas.addDrawable({ id: 2, x: 200, y: 200, width: 100, height: 100, color: "blue" })
 canvas.render();
